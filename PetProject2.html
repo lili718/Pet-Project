@@ -1,0 +1,290 @@
+<!Pet Project "Rough Draft"  Lia Johnson 11/13/18 >
+<! To do:
+   Objective: user presses button, pets mood changes
+   Pet: Husky
+   state table
+>
+<html>
+    <head>
+        <script>
+            //array list to loop through moods
+            var moods=["relaxed", "happy", "angry", "sleeping", "sad", "playful"];
+            var indexNum=0;
+            /*function moodSwitch(){
+                //label equal to mood name
+                document.getElementById("label").innerHTML=moods[indexNum];
+                //display pic associated with mood
+                document.getElementById("Mood").src=moods[indexNum]+".jpg";
+                //go to next index
+                indexNum++;
+                
+                //if we reach end of array reset index to 0 in array
+                if(indexNum>moods.length-1){
+                    indexNum=0;
+                }
+            }*/
+            function feedDog(){
+                //current state is relaxed
+                if(document.getElementById("state").innerHTML=="relaxed"){
+                    document.getElementById("state").innerHTML="happy";
+                    document.getElementById("Mood").src= "happy.jpg";
+                }
+                //current state is happy
+                else if(document.getElementById("state").innerHTML=="happy"){
+                   var rnum=Math.random();
+                    if(rnum<.5){
+                      document.getElementById("state").innerHTML="happy";
+                      document.getElementById("Mood").src= "happy.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="playful";
+                        document.getElementById("Mood").src= "playful.jpg";
+                    }
+                }
+                //current state is sleeping
+                else if(document.getElementById("state").innerHTML=="sleeping"){
+                   var rnum2=Math.random();
+                    if(rnum2<.5){
+                      document.getElementById("state").innerHTML="angry";
+                      document.getElementById("Mood").src= "angry.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="sleeping";
+                        document.getElementById("Mood").src= "sleeping.jpg";
+                    }
+                }
+                //current state is sad
+                else if(document.getElementById("state").innerHTML=="sad"){
+                   var rnum3=Math.random();
+                    if(rnum3<.5){
+                      document.getElementById("state").innerHTML="happy";
+                      document.getElementById("Mood").src= "happy.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="sad";
+                        document.getElementById("Mood").src= "sad.jpg";
+                    }
+                }
+                //current state is angry
+                else if(document.getElementById("state").innerHTML=="angry"){
+                      document.getElementById("state").innerHTML="relaxed";
+                      document.getElementById("Mood").src= "relaxed.jpg";  
+                }
+                //current state is playful
+                else{
+                   var rnum4=Math.random();
+                    if(rnum4<.5){
+                      document.getElementById("state").innerHTML="relaxed";
+                      document.getElementById("Mood").src= "relaxed.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="sleeping";
+                        document.getElementById("Mood").src= "sleeping.jpg";
+                    } 
+                }
+            }
+            
+            function petDog(){
+                  //current state is relaxed
+                if(document.getElementById("state").innerHTML=="relaxed"){
+                    document.getElementById("state").innerHTML="sleeping";
+                    document.getElementById("Mood").src= "sleeping.jpg";
+                }
+                //current state is happy
+                else if(document.getElementById("state").innerHTML=="happy"){
+                      document.getElementById("state").innerHTML="playful";
+                      document.getElementById("Mood").src= "playful.jpg";  
+                }
+                //current state is sleeping
+                else if(document.getElementById("state").innerHTML=="sleeping"){
+                      document.getElementById("state").innerHTML="relaxed";
+                      document.getElementById("Mood").src= "relaxed.jpg";  
+                }
+                //current state is sad
+                else if(document.getElementById("state").innerHTML=="sad"){
+                      document.getElementById("state").innerHTML="relaxed";
+                      document.getElementById("Mood").src= "relaxed.jpg";  
+                }
+                //current state is angry
+                else if(document.getElementById("state").innerHTML=="angry"){
+                      document.getElementById("state").innerHTML="relaxed";
+                      document.getElementById("Mood").src= "relaxed.jpg";  
+                }
+                //current state is playful
+                else{
+                   var rnum5=Math.random();
+                    if(rnum5<.5){
+                      document.getElementById("state").innerHTML="relaxed";
+                      document.getElementById("Mood").src= "relaxed.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="playful";
+                        document.getElementById("Mood").src= "playful.jpg";
+                    } 
+                }
+            }
+            
+            function playWithDog(){
+                 //current state is relaxed
+                if(document.getElementById("state").innerHTML=="relaxed"){
+                    document.getElementById("state").innerHTML="sleeping";
+                    document.getElementById("Mood").src= "sleeping.jpg";
+                }
+                //current state is happy
+                else if(document.getElementById("state").innerHTML=="happy"){
+                      document.getElementById("state").innerHTML="playful";
+                      document.getElementById("Mood").src= "playful.jpg";  
+                }
+                //current state is sleeping
+                else if(document.getElementById("state").innerHTML=="sleeping"){
+                      document.getElementById("state").innerHTML="sad";
+                      document.getElementById("Mood").src= "sad.jpg";  
+                }
+                //current state is sad
+                else if(document.getElementById("state").innerHTML=="sad"){
+                      document.getElementById("state").innerHTML="happy";
+                      document.getElementById("Mood").src= "happy.jpg";  
+                }
+                //current state is angry
+                else if(document.getElementById("state").innerHTML=="angry"){
+                     var rnum6=Math.random();
+                    if(rnum6<.5){
+                      document.getElementById("state").innerHTML="relaxed";
+                      document.getElementById("Mood").src= "relaxed.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="happy";
+                        document.getElementById("Mood").src= "happy.jpg";
+                    }
+                }
+                //current state is playful
+                else{
+                   var rnum7=Math.random();
+                    if(rnum7<.5){
+                      document.getElementById("state").innerHTML="sleeping";
+                      document.getElementById("Mood").src= "sleeping.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="playful";
+                        document.getElementById("Mood").src= "playful.jpg";
+                    } 
+                }
+            }
+            
+            function putDogToSleep(){
+                 //current state is relaxed
+                if(document.getElementById("state").innerHTML=="relaxed"){
+                    document.getElementById("state").innerHTML="sleeping";
+                    document.getElementById("Mood").src= "sleeping.jpg";
+                }
+                //current state is happy
+                else if(document.getElementById("state").innerHTML=="happy"){
+                      document.getElementById("state").innerHTML="playful";
+                      document.getElementById("Mood").src= "playful.jpg";  
+                }
+                //current state is sleeping
+                else if(document.getElementById("state").innerHTML=="sleeping"){
+                      document.getElementById("state").innerHTML="sleeping";
+                      document.getElementById("Mood").src= "sleeping.jpg";  
+                }
+                //current state is sad
+                else if(document.getElementById("state").innerHTML=="sad"){
+                      var rnum8=Math.random();
+                    if(rnum8<.5){
+                      document.getElementById("state").innerHTML="angry";
+                      document.getElementById("Mood").src= "angry.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="sleeping";
+                        document.getElementById("Mood").src= "sleeping.jpg";
+                    }
+                }
+                //current state is angry
+                else if(document.getElementById("state").innerHTML=="angry"){
+                     var rnum9=Math.random();
+                    if(rnum9<=.3){
+                      document.getElementById("state").innerHTML="angry";
+                      document.getElementById("Mood").src= "angry.jpg";  
+                    }
+                    else if(.3 < rnum9 >= .6){
+                        document.getElementById("state").innerHTML="sleeping";
+                       document.getElementById("Mood").src="sleeping.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="relaxed";
+                        document.getElementById("Mood").src= "relaxed.jpg";
+                    }
+                }
+                //current state is playful
+                else{
+                      document.getElementById("state").innerHTML="sleeping";
+                      document.getElementById("Mood").src= "sleeping.jpg";  
+                }
+            }
+            
+            function timeoutForDog(){
+                  //current state is relaxed
+                if(document.getElementById("state").innerHTML=="relaxed"){
+                    document.getElementById("state").innerHTML="angry";
+                    document.getElementById("Mood").src= "angry.jpg";
+                }
+                //current state is happy
+                else if(document.getElementById("state").innerHTML=="happy"){
+                      document.getElementById("state").innerHTML="angry";
+                      document.getElementById("Mood").src= "angry.jpg";  
+                }
+                //current state is sleeping
+                else if(document.getElementById("state").innerHTML=="sleeping"){
+                      document.getElementById("state").innerHTML="sleeping";
+                      document.getElementById("Mood").src= "sleeping.jpg";  
+                }
+                //current state is sad
+                else if(document.getElementById("state").innerHTML=="sad"){
+                      document.getElementById("state").innerHTML="sleeping";
+                      document.getElementById("Mood").src= "sleeping.jpg";  
+                }
+                //current state is angry
+                else if(document.getElementById("state").innerHTML=="angry"){
+                     var rnum10=Math.random();
+                     if(rnum10<.5){
+                      document.getElementById("state").innerHTML="relaxed";
+                      document.getElementById("Mood").src= "relaxed.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="sleeping";
+                        document.getElementById("Mood").src= "sleeping.jpg";
+                    }   
+                }
+                //current state is playful
+                else{
+                   var rnum11=Math.random();
+                    if(rnum11<.5){
+                      document.getElementById("state").innerHTML="relaxed";
+                      document.getElementById("Mood").src= "relaxed.jpg";  
+                    }
+                    else{
+                        document.getElementById("state").innerHTML="sad";
+                        document.getElementById("Mood").src= "sad.jpg";
+                    } 
+                }  
+            }
+            
+           
+        </script>
+    </head>
+    <body>
+        <center>
+            <title>Pet Project P2</title>
+            <h1> Virtual Pet Husky</h1>
+            <h3> Hi, my name is Sasha. Come Interact With Me!</h3>
+            <h4>By Lia Johnson</h4>
+            <img id="Mood" src="relaxed.jpg" height="200">
+            <div id="state">relaxed</div>
+            <button onclick="feedDog()">Feed</button>
+            <button onclick="petDog()">Pet</button>
+            <button onclick="playWithDog()">Play</button>
+            <button onclick="putDogToSleep()">Put to Sleep</button>
+            <button onclick="timeoutForDog()">Timeout</button>
+        </center>
+    </body>
+</html>
